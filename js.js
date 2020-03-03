@@ -5,9 +5,9 @@ $(function(){
     
     $(".ham").on("click",function(){
         $(".ham").css("display","none");
-        $(".side").css("margin-left",0);
-        $("section, header, footer").on("click",function(){
-            $(".side").css("margin-left","-390px");
+        $("#sidemenu").css("margin-left",0);
+        $("section").not("#sidemenu").on("click",function(){
+            $("#sidemenu").css("margin-left","-390px");
             setTimeout(function(){
                 $(".ham").css("display","block");
             }, 500);
@@ -30,7 +30,7 @@ $(function(){
 
     $(".side> .menu> li").on("click",function(e){
         e.preventDefault();
-        $(".side").css("margin-left","-390px");
+        $("#sidemenu").css("margin-left","-390px");
         setTimeout(function(){
             $(".ham").css("display","block");
         }, 500);
@@ -49,9 +49,9 @@ $(function(){
         $("html, body").stop().animate({"scrollTop":top}, 1000, "easeOutQuad");
     });
 
-    let scrolling = 0;
+    let scrolling = false;
 
-    $("body> *").on("wheel", function(e){
+    $("body> section").on("wheel", function(e){
         e.preventDefault();
         if(scrolling) return;
 
@@ -59,17 +59,18 @@ $(function(){
         let idx = $(this).index();
 
         if(delta > 0 && idx <= 8) {            
-            scrolling = 1;
-            let next = $("body> *").eq(idx+1).offset().top;
+            scrolling = true;
+            let next = $("body> section").eq(idx+1).offset().top;
             $("html, body").stop().animate({"scrollTop": next}, 1500, "easeOutQuad", function(){scrolling = 0;});
         }
         else if(delta < 0 && idx > 0){
-            scrolling = 1;
-            let prev = $("body> *").eq(idx-1).offset().top;
+            scrolling = true;
+            let prev = $("body> section").eq(idx-1).offset().top;
             $("html, body").stop().animate({"scrollTop": prev}, 1500, "easeOutQuad", function(){scrolling = 0;});
         }
     });
 
+    /*
     $(window).scroll(function(){
         let here = $("#ability").offset().top;
         let height = $(document).scrollTop();
@@ -81,10 +82,27 @@ $(function(){
             $(".grap").delay(3000).removeClass("on");
         };
     });
-    $(".ability").on("click", function(){    
-        setTimeout(function(){
+*/
+
+    $(window).scroll(function(){
+        let here = $("#ability").offset().top;
+        let sectionHeight = $("#ability").height();
+        
+        let height = $(document).scrollTop();
+        
+        if(height >= here && height <= here + sectionHeight){
             $(".grap").addClass("on");
-        }, 1000);
+        }else {
+            $(".grap").delay(3000).removeClass("on");
+        };
+    });
+
+    $(".ability").on("click", function(){    
+        // setTimeout(function(){
+        //     $(".grap").addClass("on");
+        // }, 1000);
+        $(".grap").addClass("on");
+
     })
 
     $(".gl").on("click", function(){
@@ -123,6 +141,10 @@ $(function(){
         // $(".cont2").html(temp);
         // $(this).html(i);
     });
+
+    $(".hoho").mouseover(function(){
+        
+    }) 
 
     $(".footer-div> .menu> div").on("click",function(e){
         e.preventDefault();

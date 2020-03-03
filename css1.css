@@ -26,6 +26,19 @@ body{
     width: 100vw;
     overflow-x: hidden;
 }
+#sidemenu{
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    margin-left: -250px;
+    z-index: 20;
+    transition: all 0.5s;
+}
+.side{
+    width: 100%;
+    height: 100%;
+}
 .ham{
     position: fixed;
     top: 30px;
@@ -42,15 +55,6 @@ body{
 .ham> i:hover{
     color: #482B47;
     transform: scale(1.2);
-}
-.side{
-    position: fixed;
-    width: 250px;
-    height: 100vh;
-    background: rgba(0,0,0,0.5);
-    margin-left: -250px;
-    z-index: 20;
-    transition: all 0.5s;
 }
 .side> p{
     color: #fff;
@@ -95,6 +99,10 @@ body{
     color: #fff;
 }
 
+
+#header{
+    width: 100%;
+}
 header{
     position: relative;
     width: 100%;
@@ -318,13 +326,14 @@ section h2{
 .grap{
     height: 100%;
     width: 0;
-    border-right: 1px solid #000;
     border-radius: 30px;
     transition: all 0.5s;
     position: absolute;
     top: 0;
     left: 0;
 }
+.grap.on{border-right: 1px solid #000;}
+
 .ab-graph:nth-child(1) .grap.on{background: #00C8FF; width: 70%;}
 .ab-graph:nth-child(2) .grap.on{background: #EA6029; width: 70%;}
 .ab-graph:nth-child(3) .grap.on{background: #89BCDC; width: 50%;}
@@ -424,6 +433,7 @@ section h2{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     margin-top: 50px;
+    position: relative;
 }
 .box-div> div{
     background-size: cover;
@@ -431,24 +441,31 @@ section h2{
     position: relative;
     z-index: 2;
 }
-.box-div> div:hover{
-    z-index: 5;
-}
-.box-div> div> p{
+.hoho{
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
-    position: relative;
     z-index: 2;
     transition: all 1s;
 }
-.box-div> div> p:hover{
+.hoho:hover{
+    z-index: 5;
     transform: scale(1.05);
     box-shadow: 0 0 10px #555;
     text-shadow: 0 0 2px #333;
 }
-.box-div> div> div{
+.box-div> div:nth-child(1){background-image: url(color/img/v3.jpg); grid-column: 1/3;}
+.box-div> .violet{background: #91568F;}
+.box-div> div:nth-child(3){background-image: url(color/img/g3.jpg); grid-column: 4/5; grid-row: 1/3;}
+.box-div> .gray{background: #aaa;}
+.box-div> .blue{background: rgb(57, 69, 228);}
+.box-div> .green{background: rgb(142, 190, 123);}
+.box-div> div:nth-child(7){background-image: url(color/img/gr3.jpg); grid-column: 2/4}
+.box-div> div:nth-child(8){background-image: url(color/img/b2.jpg); grid-column: 5/7}
+
+.box-div> div.black{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -458,24 +475,7 @@ section h2{
     background: rgba(0,0,0,0.5);
     transition: all 1s;
 }
-
-.box-div> .violet> div{ width: 200%;}
-.box-div> .violet>p:hover ~ div{ transform: translateX(-100%);}
-.box-div> .gray> div{ height: 200%;}
-.box-div> .gray> p:hover ~ div{ transform: translateX(-100%);}
-.box-div> .blue> div{ width: 200%; transform: translateX(-50%);}
-.box-div> .blue> p:hover ~ div{ transform: translate(-50%, 100%);}
-.box-div> .green> div{ width: 200%;}
-.box-div> .green> p:hover ~ div{ transform: translateX(50%);}
-
-.box-div> div:nth-child(1){background-image: url(color/img/v3.jpg); grid-column: 1/3;}
-.box-div> .violet> p{background: #91568F;}
-.box-div> div:nth-child(3){background-image: url(color/img/g3.jpg); grid-column: 4/5; grid-row: 1/3;}
-.box-div> .gray> p{background: #aaa;}
-.box-div> .blue> p{background: rgb(57, 69, 228);}
-.box-div> .green> p{background: rgb(142, 190, 123);}
-.box-div> div:nth-child(7){background-image: url(color/img/gr3.jpg); grid-column: 2/4}
-.box-div> div:nth-child(8){background-image: url(color/img/b2.jpg); grid-column: 5/7}
+.black> div{background: rgba(0,0,0,0.5);}
 
 
 #info{
