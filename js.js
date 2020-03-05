@@ -133,22 +133,17 @@ $(function(){
         let name = "";
 
         name = hwac[0] + ".gif";
-        console.log(name);
         $(this).children("img").attr("src", name);
+
         name = hwac2[0] + ".png";
         $("#ppt .cont2> img").attr("src", name);
-        console.log(name);
+
         name ="";
     })
 
 
     $(".cont> ul> li").on("click",function(){
         let a = $(this).attr("class");
-        
-        
-        // if(b == 0)  $(img).attr("src","img/ppt1.gif").siblings(".cont2").
-        // else if(b == 1) $(".cont2> img").attr("src","img/ppt2.gif")
-        // else if(b == 2) $(".cont2> img").attr("src","img/ppt3.gif")
 
         if(a == "cont1"){
             $(this).removeClass("cont1").addClass("cont2").siblings(".cont2").removeClass("cont2").addClass("cont1");
@@ -157,17 +152,30 @@ $(function(){
             $(this).removeClass("cont3").addClass("cont2").siblings(".cont2").removeClass("cont2").addClass("cont3");
         }
 
-        
-        // let temp = $(this).html();
-        // let i = $(".cont2").html();
-
-        // $(".cont2").html(temp);
-        // $(this).html(i);
     });
 
-    $(".hoho").mouseover(function(){
-        
-    }) 
+    $("#violet, #gray, #green, #blue").mouseover(function(){
+        let cl = $(this).attr("id");
+
+        if(cl == "violet"){
+            $(".vil, .violet-b").addClass("on");
+        }
+        else if(cl == "green"){
+            $(".gn, .green-b").addClass("on");
+        }
+        else if(cl == "gray"){
+            $(".gr, .gray-b").addClass("on");
+        }
+        else if(cl == "blue"){
+            $(".br, .blue-b").addClass("on");
+        }
+    })
+    $("#violet, #gray, #green, #blue").mouseout(function(){
+        $(".gray-b, .green-b, .blue-b, .violet-b").removeClass("on");
+        setTimeout(function(){
+            $(".gr, .gn, .bl, .vil").removeClass("on");
+        }, 500);
+    })
 
     $(".footer-div> .menu> div").on("click",function(e){
         e.preventDefault();
