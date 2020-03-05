@@ -155,63 +155,46 @@ $(function(){
     });
 
     function bg_on(color){
-        let node;
+        let re = new Array;
 
-        if(aa = "violet"){
-            node[0] = ".vil";
-            node[1] = ".violet-b";
+        if(color == "violet"){
+            re[0] = ".vil";
+            re[1] = ".violet-b";
         }
-        else if(aa = "gray"){
-            node[0] = ".gr";
-            node[1] = ".gray-b";
+        else if(color == "gray"){
+            re[0] = ".gr";
+            re[1] = ".gray-b";
         }
-        else if(aa = "blue"){
-            node[0] = ".br";
-            node[1] = ".blue-b";
+        else if(color == "blue"){
+            re[0] = ".br";
+            re[1] = ".blue-b";
         }
-        else if(aa = "green"){
-            node[0] = ".gn";
-            node[1] = ".green-b";
+        else if(color == "green"){
+            re[0] = ".gn";
+            re[1] = ".green-b";
         }
 
-        return node;
+        return re;
     }
 
     $("#violet, #gray, #green, #blue").mouseover(function(){
         let cl = $(this).attr("id");
+        let colors = bg_on(cl);
 
-        
-        if(cl == "violet"){
-            $(".vil, .violet-b").addClass("on");
-            setTimeout(function(){
-                $(".violet-b> div").css({"visibility":"visible"});
-            }, 300);
-        }
-        else if(cl == "green"){
-            $(".gn, .green-b").addClass("on");
-            setTimeout(function(){
-                $(".green-b> div").css({"visibility":"visible"});
-            }, 300);
-        }
-        else if(cl == "gray"){
-            $(".gr, .gray-b").addClass("on");
-            setTimeout(function(){
-                $(".gray-b> div").css({"visibility":"visible"});
-            }, 300);
-        }
-        else if(cl == "blue"){
-            $(".br, .blue-b").addClass("on");
-            setTimeout(function(){
-                $(".blue-b> div").css({"visibility":"visible"});
-            }, 300);
-        }
+        $(colors[0]+','+colors[1]).addClass("on");
+        setTimeout(function(){
+            $(colors[1] + "> div").css({"visibility":"visible"});
+        }, 300);
     });
 
     $("#violet, #gray, #green, #blue").mouseout(function(){
-        $(".black").removeClass("on");
-        $(".black> div").css({"visibility":"hidden"});
+        let cl = $(this).attr("id");
+        let colors = bg_on(cl);
+
+        $(colors[1]).removeClass("on");
+        $(colors[1] + "> div").css({"visibility":"hidden"});
         setTimeout(function(){
-            $(".gr, .gn, .bl, .vil").removeClass("on");
+            $(colors[0]).removeClass("on");
         }, 500);
     })
 

@@ -486,7 +486,7 @@ section h2{
     line-height: 40px;
     padding: 0 20px;
     text-align: center;
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 .violet-b{top: 0; left: calc(200px * 2);}
 .gray-b{top: 0; left: calc(200px * 4);}
