@@ -126,19 +126,25 @@ $(function(){
         $(".tab-div> div").eq(a).addClass("on");
     });
 
+    
+    $("#ppt> ul> li").click(function(){
+        let hwac = $(this).children("img").attr("src").split(".");
+        let hwac2 = $("#ppt .cont2> img").attr("src").split(".");
+        let name = "";
+
+        name = hwac[0] + ".gif";
+        console.log(name);
+        $(this).children("img").attr("src", name);
+        name = hwac2[0] + ".png";
+        $("#ppt .cont2> img").attr("src", name);
+        console.log(name);
+        name ="";
+    })
+
+
     $(".cont> ul> li").on("click",function(){
         let a = $(this).attr("class");
-        let b = $(this).index();
-        let img = $(this).children("img");
         
-        let hwac = img.split(".");
-        let name = '';
-
-        for(var i = 0; i < 4; i++){
-            name = hwac[i]+".gif";
-        }
-
-        console.log(name);
         
         // if(b == 0)  $(img).attr("src","img/ppt1.gif").siblings(".cont2").
         // else if(b == 1) $(".cont2> img").attr("src","img/ppt2.gif")
