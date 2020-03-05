@@ -128,6 +128,21 @@ $(function(){
 
     $(".cont> ul> li").on("click",function(){
         let a = $(this).attr("class");
+        let b = $(this).index();
+        let img = $(this).children("img");
+        
+        let hwac = img.split(".");
+        let name = '';
+
+        for(var i = 0; i < 4; i++){
+            name = hwac[i]+".gif";
+        }
+
+        console.log(name);
+        
+        // if(b == 0)  $(img).attr("src","img/ppt1.gif").siblings(".cont2").
+        // else if(b == 1) $(".cont2> img").attr("src","img/ppt2.gif")
+        // else if(b == 2) $(".cont2> img").attr("src","img/ppt3.gif")
 
         if(a == "cont1"){
             $(this).removeClass("cont1").addClass("cont2").siblings(".cont2").removeClass("cont2").addClass("cont1");
@@ -135,6 +150,8 @@ $(function(){
         else if(a == "cont3"){
             $(this).removeClass("cont3").addClass("cont2").siblings(".cont2").removeClass("cont2").addClass("cont3");
         }
+
+        
         // let temp = $(this).html();
         // let i = $(".cont2").html();
 

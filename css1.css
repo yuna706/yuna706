@@ -370,13 +370,13 @@ section h2{
     display: flex;
     height: 500px;
     justify-content: space-between;
-    width: 2200px;
-    margin-left: -1000px;
+    width: 2100px;
+    margin-left: -900px;
     margin-top: 50px;
     position: relative;
 }
 .cont li{
-    width: 1000px;
+    width: 900px;
     height: 100%;
     position: absolute;
     transition: all 1s;
@@ -386,6 +386,7 @@ section h2{
 }
 .cont li> img{
     width: 100%;
+    animation: like-gif steps(28) 1s infinite both;
 }
 .cont1{
     transform: rotate(5deg);
@@ -393,6 +394,7 @@ section h2{
     height: 400px; 
     top: -50px;
     left: 0;
+    animation-play-state : paused;
 }
 .cont2{
     margin: 0;
@@ -406,6 +408,7 @@ section h2{
     left: 100%;
     width: 800px;
     height: 400px; 
+    animation-play-state : paused;
 }
 
 #colors{
