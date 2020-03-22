@@ -1,4 +1,4 @@
-$(function(){
+$(function() {
     let he = $(window).height();
     $(".side> .menu> li, nav> ul> li, .gl, .gl>i, .tab-div> div").addClass("click");
     $(".info-box *, footer .menu> div, footer .sns> a> i").addClass("click");
@@ -206,5 +206,4 @@ $(function(){
 
         $("html, body").stop().animate({"scrollTop":top}, 1000, "easeOutQuad");
     });
-    
-})
+});
