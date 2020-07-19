@@ -1,3 +1,4 @@
+/* format */
 @font-face{
     font-family: 'NanumSquareR';
     src: url(NanumSquareR.ttf) format('truetype');
@@ -26,6 +27,9 @@ body{
     width: 100vw;
     overflow-x: hidden;
 }
+
+
+/************ 왼쪽 메뉴 ************/
 #sidemenu{
     position: fixed;
     width: 250px;
@@ -99,7 +103,7 @@ body{
     color: #fff;
 }
 
-
+/****************** header *********************/
 #header{
     width: 100%;
 }
@@ -150,7 +154,7 @@ header> img{
     transform: translateX(-50%);
 }
 
-
+/************ section format *************/
 section{
     width: 1200px;
     height: 100vh;
@@ -169,6 +173,9 @@ section h2{
     width: 100%;
     border-bottom: 2px solid #ccc;
 }
+
+
+/* sct1 */
 #motto{
     position: relative;
     background: linear-gradient(#91568F, rgba(0,0,0,0.0));
@@ -188,6 +195,8 @@ section h2{
     text-align: center;
 }
 
+
+/* sct2 */
 .portfolio-grid{
     width: 80%;
     height: 500px;
@@ -235,6 +244,7 @@ section h2{
 }
 .port> .gl:hover{animation: kejack 0.5s infinite alternate linear;}
 
+/* 포폴 팝업 */
 #popup{
     visibility: hidden;
     position: fixed;
@@ -294,8 +304,17 @@ section h2{
     color: #fff;
     font-size:  25px;
 }
+.popup> .ex> a{
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.popup> .ex> a> i{
+    font-size: 50px;
+}
 
-
+/* stc3 */
 #ability> .graph-div{
     width: 90%;
     height: 550px;
@@ -338,10 +357,10 @@ section h2{
 .ab-graph:nth-child(2) .grap.on{background: #EA6029; width: 70%;}
 .ab-graph:nth-child(3) .grap.on{background: #89BCDC; width: 50%;}
 .ab-graph:nth-child(4) .grap.on{background: #EABA25; width: 20%;}
-.ab-graph:nth-child(5) .grap.on{background: #005798; width: 10%;}
+.ab-graph:nth-child(5) .grap.on{background: #005798; width: 40%;}
 
 
-
+/* sct4 */
 #hobby> .tab-div{
     display: flex;
     margin-top: -1px;
@@ -364,7 +383,10 @@ section h2{
     display: block;
 }
 .cont> img{
-    margin-top: 100px;
+    margin: 50px auto;
+    width: 900px;
+    display: block;
+    box-shadow: 0px 3px 10px #999;
 }
 .cont> ul{
     display: flex;
@@ -383,6 +405,7 @@ section h2{
     overflow: hidden;
     display: flex;
     align-items: center;
+    box-shadow: 0px 3px 10px #999;
 }
 .cont li> img{
     width: 100%;
@@ -498,6 +521,7 @@ div.blue-b.on{width: calc(200px * 2); height: 275px; top: 275px;}
 div.green-b.on{width: calc(200px * 2); height: 275px; left: 200px;}
 
 
+/********* info ********/
 #info{
     position: relative;
     width: 100%;
@@ -532,6 +556,9 @@ div.green-b.on{width: calc(200px * 2); height: 275px; left: 200px;}
 .info-box> a> p{
     line-height: 50px;
 }
+
+
+/************ footer ***********/
 footer{
     height: 200px;
     position: absolute;
