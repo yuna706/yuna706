@@ -29,7 +29,6 @@ $(function() {
     });
 
 
-    /*
     $(".side> .menu> li").on("click",function(e){
         e.preventDefault();
         $("#sidemenu").css("margin-left","-390px");
@@ -90,7 +89,7 @@ $(function() {
 */
 
     $(window).scroll(function(){
-        let here = $("#ability").offset().top;
+        let here = $("#ability").offset().top - 300;
         let sectionHeight = $("#ability").height();
         
         let height = $(document).scrollTop();

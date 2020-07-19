@@ -355,8 +355,8 @@ section h2{
 
 .ab-graph:nth-child(1) .grap.on{background: #00C8FF; width: 70%;}
 .ab-graph:nth-child(2) .grap.on{background: #EA6029; width: 70%;}
-.ab-graph:nth-child(3) .grap.on{background: #89BCDC; width: 50%;}
-.ab-graph:nth-child(4) .grap.on{background: #EABA25; width: 20%;}
+.ab-graph:nth-child(3) .grap.on{background: #EABA25; width: 30%;}
+.ab-graph:nth-child(4) .grap.on{background: #DB5440; width: 30%;}
 .ab-graph:nth-child(5) .grap.on{background: #005798; width: 40%;}
 
 
