@@ -28,6 +28,8 @@ $(function() {
         audio.currentTime = 0;
     });
 
+
+    
     $(".side> .menu> li").on("click",function(e){
         e.preventDefault();
         $("#sidemenu").css("margin-left","-390px");
@@ -48,7 +50,8 @@ $(function() {
 
         $("html, body").stop().animate({"scrollTop":top}, 1000, "easeOutQuad");
     });
-
+    
+ /*
     let scrolling = false;
 
     $("body> section").on("wheel", function(e){
@@ -69,6 +72,8 @@ $(function() {
             $("html, body").stop().animate({"scrollTop": prev}, 1500, "easeOutQuad", function(){scrolling = 0;});
         }
     });
+*/
+
 
     /*
     $(window).scroll(function(){
