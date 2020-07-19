@@ -29,7 +29,7 @@ $(function() {
     });
 
 
-    
+    /*
     $(".side> .menu> li").on("click",function(e){
         e.preventDefault();
         $("#sidemenu").css("margin-left","-390px");
@@ -50,7 +50,7 @@ $(function() {
 
         $("html, body").stop().animate({"scrollTop":top}, 1000, "easeOutQuad");
     });
-    
+
  /*
     let scrolling = false;
 
