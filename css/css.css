@@ -315,6 +315,10 @@ section h2{
 .popup> .ex> p> a> i{
     font-size: 50px;
 }
+.popup> p{
+    color: #fff;
+    font-size: 1.5em;
+}
 
 /* stc3 */
 #ability> .graph-div{

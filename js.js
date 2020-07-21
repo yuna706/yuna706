@@ -1,4 +1,5 @@
 $(function() {
+    alert("본 페이지는 크롬 1920 이하에 최적화되어있습니다.");
 
     //마우스 포인터 클래스 배부
     $(".side> .menu> li, nav> ul> li, .gl, .gl>i, .tab-div> div").addClass("click");
@@ -117,8 +118,8 @@ $(function() {
 
     let a;
     //팝업창 띄우기
-    $(".gl").on("click", function(){
-        a = $(this).parent().index();
+    $(".port").on("click", function(){
+        a = $(this).index();
         
         $("#popup").addClass("on");
         $(".popup").eq(a).css({"visibility":"visible"});
