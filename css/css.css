@@ -583,10 +583,8 @@ footer{
     height: 50px;
     width: 85%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(6, 1fr);
 }
 .footer-div> .menu> div{
@@ -601,7 +599,7 @@ footer{
 }
 .footer-div> .menu> div:hover{
     color: #fff;
-    font-size: 23px;
+    font-size: 22px;
 }
 .footer-div> .sns{
     height: 50px;

@@ -160,12 +160,14 @@ $(function() {
     //중앙으로 배치
     $(".cont> ul> li").on("click",function(){
         let a = $(this).attr("class");
-
         if(a == "cont1"){
             $(this).removeClass("cont1").addClass("cont2").siblings(".cont2").removeClass("cont2").addClass("cont1");
         }
         else if(a == "cont3"){
             $(this).removeClass("cont3").addClass("cont2").siblings(".cont2").removeClass("cont2").addClass("cont3");
+        }
+        else if(a == "cont2"){
+            alert("다시 움직이게 하려면 양 옆의 사진을 눌러주세요 :)");
         }
 
     });
