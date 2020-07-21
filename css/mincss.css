@@ -1,0 +1,44 @@
+@media(max-width : 1200px){
+    nav> ul{
+        width: 90%;
+    }
+    nav> ul> li{
+        font-size: 20px;
+    }
+    section{
+        width: 100%;
+    }
+    section> .wrap{
+        width: 100%;
+    }
+    section> h2{
+        padding: 0 20px;
+    }
+
+    /* popup */
+    .popup> .ex> h3{
+        font-size: 30px;
+    }
+    .popup> .ex> hr{
+        margin: 20px 0;
+    }
+    .popup> .ex> p{
+        font-size: 15px;
+    }
+
+    /* stc3 */
+    .graph-div> .ab-graph{
+        font-size: 25px;
+    }
+    .ab-graph> p{
+        margin: 0 10px;
+    }
+    .ab-graph> div{
+        width: 70%;
+    }
+
+
+
+}
+
+/* 830px */

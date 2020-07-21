@@ -1,8 +1,10 @@
 $(function() {
-    let he = $(window).height();
+
+    //마우스 포인터 클래스 배부
     $(".side> .menu> li, nav> ul> li, .gl, .gl>i, .tab-div> div").addClass("click");
     $(".info-box *, footer .menu> div, footer .sns> a> i").addClass("click");
     
+    //햄버거 메뉴 클릭시
     $(".ham").on("click",function(){
         $(".ham").css("display","none");
         $("#sidemenu").css("margin-left",0);
@@ -14,6 +16,7 @@ $(function() {
         });
     });
 
+    //노래재생
     let audio = new Audio();
     audio.src = "./lukewarm.mp3";
 
@@ -28,15 +31,17 @@ $(function() {
         audio.currentTime = 0;
     });
 
+    //메뉴 클릭시 스크롤 이동
+    let he = $(window).height(); //화면 높이 구함
 
     $(".side> .menu> li").on("click",function(e){
         e.preventDefault();
-        $("#sidemenu").css("margin-left","-390px");
+        $("#sidemenu").css("margin-left","-390px"); //햄버거 메뉴 사라지기
         setTimeout(function(){
             $(".ham").css("display","block");
         }, 500);
-        let idx = $(this).index();
-        let top = idx * he;
+        let idx = $(this).index(); //몇번 째가 클릭되었는지
+        let top = idx * he; //높이 알아내기
 
         $("html, body").stop().animate({"scrollTop":top}, 1000, "easeOutQuad");
     });
@@ -50,7 +55,8 @@ $(function() {
         $("html, body").stop().animate({"scrollTop":top}, 1000, "easeOutQuad");
     });
 
- /*
+    //마우스 스크롤시 한 페이지 단위 이동
+    /*
     let scrolling = false;
 
     $("body> section").on("wheel", function(e){
@@ -71,9 +77,10 @@ $(function() {
             $("html, body").stop().animate({"scrollTop": prev}, 1500, "easeOutQuad", function(){scrolling = 0;});
         }
     });
-*/
+    */
 
 
+    //사용 안함
     /*
     $(window).scroll(function(){
         let here = $("#ability").offset().top;
@@ -88,6 +95,7 @@ $(function() {
     });
 */
 
+    //ability화면에 도달하면 그래프 움직이기
     $(window).scroll(function(){
         let here = $("#ability").offset().top - 300;
         let sectionHeight = $("#ability").height();
@@ -101,36 +109,40 @@ $(function() {
         };
     });
 
+    //메뉴에서 ability를 클릭했을 때
     $(".ability").on("click", function(){    
-        // setTimeout(function(){
-        //     $(".grap").addClass("on");
-        // }, 1000);
         $(".grap").addClass("on");
+    });
 
-    })
 
+    let a;
+    //팝업창 띄우기
     $(".gl").on("click", function(){
-        let a = $(this).parent().index();
+        a = $(this).parent().index();
         
         $("#popup").addClass("on");
         $(".popup").eq(a).css({"visibility":"visible"});
-
-        $("#popup").on("click", function(){
-            $("#popup").removeClass("on");
-            $(".popup").eq(a).css({"visibility":"hidden"});                
-        })
+        $(".ham").css("display", "none");        
     });
 
+    //팝업창 닫기
+    $("#popup").on("click", function(){
+        $("#popup").removeClass("on");
+        $(".popup").eq(a).css({"visibility":"hidden"});                
+        $(".ham").css("display", "block");        
+    });
+
+    // hobby에서 사진 갤러리
     $(".tab-div> div").on("click", function(){
-        let a = $(this).index();
+        let b = $(this).index();
 
         $(".cont").removeClass("on");
         $(".tab-div> div").removeClass("on");
-        $(".cont").eq(a).addClass("on");
-        $(".tab-div> div").eq(a).addClass("on");
+        $(".cont").eq(b).addClass("on");
+        $(".tab-div> div").eq(b).addClass("on");
     });
 
-    
+    //jpg 파일 확장자 -> gif로 변환
     $("#ppt> ul> li").click(function(){
         let hwac = $(this).children("img").attr("src").split(".");
         let hwac2 = $("#ppt .cont2> img").attr("src").split(".");
@@ -145,7 +157,7 @@ $(function() {
         name ="";
     })
 
-
+    //중앙으로 배치
     $(".cont> ul> li").on("click",function(){
         let a = $(this).attr("class");
 
@@ -158,6 +170,7 @@ $(function() {
 
     });
 
+    //colors
     function bg_on(color){
         let re = new Array;
 
