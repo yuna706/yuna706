@@ -1,6 +1,4 @@
 $(function() {
-    alert("본 페이지는 크롬 1920 이하에 최적화되어있습니다.");
-
     //마우스 포인터 클래스 배부
     $(".side> .menu> li, nav> ul> li, .gl, .gl>i, .tab-div> div").addClass("click");
     $(".info-box *, footer .menu> div, footer .sns> a> i").addClass("click");
@@ -34,7 +32,7 @@ $(function() {
 
     //메뉴 클릭시 스크롤 이동
     let he = $(window).height(); //화면 높이 구함
-
+    console.log(he);
     $(".side> .menu> li").on("click",function(e){
         e.preventDefault();
         $("#sidemenu").css("margin-left","-390px"); //햄버거 메뉴 사라지기

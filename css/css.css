@@ -385,6 +385,7 @@ section h2{
 }
 .cont{
     display: none;
+    height: 80%;
 }
 .cont.on{
     display: block;
