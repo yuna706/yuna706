@@ -199,27 +199,6 @@ $(function() {
         return re;
     }
 
-    $("#violet, #gray, #green, #blue").mouseover(function(){
-        let cl = $(this).attr("id");
-        let colors = bg_on(cl);
-
-        $(colors[0]+','+colors[1]).addClass("on");
-        setTimeout(function(){
-            $(colors[1] + "> div").css({"visibility":"visible"});
-        }, 300);
-    });
-
-    $("#violet, #gray, #green, #blue").mouseout(function(){
-        let cl = $(this).attr("id");
-        let colors = bg_on(cl);
-
-        $(colors[1]).removeClass("on");
-        $(colors[1] + "> div").css({"visibility":"hidden"});
-        setTimeout(function(){
-            $(colors[0]).removeClass("on");
-        }, 500);
-    })
-
     $(".footer-div> .menu> div").on("click",function(e){
         e.preventDefault();
 

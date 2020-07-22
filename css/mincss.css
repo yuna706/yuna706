@@ -147,6 +147,16 @@
         margin-top: 2%;
     }
 
+    /* lrearn */
+    #learnt> ul{
+        height: auto;
+    }
+    #learnt> ul> li{
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+
     /* hobby */
     .cont> ul{
         margin-top: 5%;
