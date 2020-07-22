@@ -1,13 +1,13 @@
 /* format */
 @font-face{
-    font-family: 'NanumSquareR';
-    src: url(NanumSquareR.ttf) format('truetype');
+    font-family: 'koko';
+    src: url(../NanumSquareR.ttf) format('truetype');
 }
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'NanumSquareR';
+    font-family: 'Inconsolata', 'Montserrat', koko, sans-serif;
     cursor: url(../img/cursor.png), auto;
 }
 ::-webkit-scrollbar{
@@ -62,7 +62,7 @@ body{
 }
 .side> p{
     color: #fff;
-    font-size: 30px;
+    font-size: 40px;
     width: 250px;
     margin: 30px;
     margin-bottom: 20px;
@@ -74,7 +74,7 @@ body{
     justify-content: space-around;
 }
 .side> .player> li{
-    font-size: 30px;
+    font-size: 40px;
     color: #fff;
 }
 .side> .menu{
@@ -92,10 +92,10 @@ body{
     display: flex;
     align-items: center;
     color: #ccc;
-    font-size: 25px;
+    font-size: 30px;
     width: 100%;
     height: 60px;
-    padding-left: 50px;
+    padding-left: 30px;
     transition: all 0.5s;
 }
 .side> .menu> li:hover{
@@ -119,6 +119,8 @@ header> h1{
     text-shadow: 1px 1px 10px #555;
     text-align: center;
     padding-top: 50px;
+    font-weight: 600;
+    font-family: 'Montserrat';
 }
 nav{
     border-top: 2px solid #ccc;
@@ -137,7 +139,7 @@ nav> ul{
     margin: 0 auto;
 }
 nav> ul> li{
-    font-size: 25px;
+    font-size: 30px;
     color: #ccc;
     transition: all 0.5s;
 }
@@ -172,6 +174,8 @@ section h2{
     font-weight: normal;
     width: 100%;
     border-bottom: 2px solid #ccc;
+    font-weight: 600;
+    font-family: koko, serif;
 }
 
 
@@ -187,6 +191,7 @@ section h2{
     margin-top: 100px;
     line-height: 70px;
     text-shadow: 0 0 15px #ddd;
+    font-weight: 600;
 }
 #motto> .wrap> span{
     display: block;
@@ -473,6 +478,7 @@ section h2{
     justify-content: center;
     align-items: center;
     height: 100%;
+    font-size: 1.3em;
     transition: all 1s;
 }
 .box-div> div.on{
@@ -511,6 +517,7 @@ section h2{
     padding: 0 20px;
     text-align: center;
     visibility: hidden;
+    font-size: 1.3em;
 }
 .violet-b{top: 0; left: calc(200px * 2);}
 .gray-b{top: 0; left: calc(200px * 4);}
@@ -543,7 +550,7 @@ div.green-b.on{width: calc(200px * 2); height: 275px; left: 200px;}
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 200px;
+    width: auto;
     margin: 0 auto;
     transition: all 0.5s;
 }
@@ -557,6 +564,7 @@ div.green-b.on{width: calc(200px * 2); height: 275px; left: 200px;}
 }
 .info-box> a> p{
     line-height: 50px;
+    font-size: 1.3em;
 }
 
 
@@ -590,7 +598,7 @@ footer{
     color: #ccc;
     border-right: 1px solid #fff;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.4em;
     transition: all 0.5s;
 }
 .footer-div> .menu> div:last-child{
