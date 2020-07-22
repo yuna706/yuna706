@@ -1,14 +1,12 @@
 # yuna706
 
-해야할 것
 
+<img src="img/header.png">
+<a href="https://yuan706.github.io/yuna706">https://yuan706.github.io/yuna706</a>
+ 
+<br><br>
+
+해야할 것
 <ol>
-  <li>반응형 페이지로 만들기</li>
-  <li>github io로 접근했을때도 볼 수 있도록 만들기 --완료</li>
-  <li>포트폴리오 내용 채우기
-    <ul>
-      <li>모든 소개 ppt를 pdf로 변환 후 로드할 수 있게 하기 -- 이번 주까지 하기</li>
-    </ul>
-  </li>
-  <li>스크립트 언어 더 공부하기</li>
+  <li>스크립트 언어 더 공부하기(ajax, jsp)</li>
 </ol>
