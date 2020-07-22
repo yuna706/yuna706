@@ -121,14 +121,14 @@ $(function() {
         
         $("#popup").addClass("on");
         $(".popup").eq(a).css({"visibility":"visible"});
-        $(".ham").css("display", "none");        
+        $(".ham").css("display", "none");
     });
 
     //팝업창 닫기
     $("#popup").on("click", function(){
         $("#popup").removeClass("on");
         $(".popup").eq(a).css({"visibility":"hidden"});                
-        $(".ham").css("display", "block");        
+        $(".ham").css("display", "block");
     });
 
     // hobby에서 사진 갤러리

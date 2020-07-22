@@ -27,6 +27,9 @@
     }
 
     /* popup */
+    .popup{
+        width: 90%;
+    }
     .popup> .ex> h3{
         font-size: 30px;
     }
@@ -105,7 +108,7 @@
 }
 
 /* height 반응형 */
-@media(max-height : 900px){
+@media(max-height : 700px){
     .side> p{
         margin: 10px;
     }
