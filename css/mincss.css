@@ -155,7 +155,13 @@
         height: auto;
         padding-bottom: 10px;
     }
-
+    #learnt> div{
+        margin-top: 20px;
+    }
+    #learnt> div> p{
+        margin: 0;
+    }
+    
 
     /* hobby */
     .cont> ul{

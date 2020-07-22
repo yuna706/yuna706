@@ -406,7 +406,12 @@ section h2{
 #learnt> ul> li> ul> li> i{
     font-size: 0.7em;
 }
-
+#learnt> div{
+    margin-top: 5%;
+}
+#learnt> div> p{
+    margin: 10px 0;
+}
 
 
 
