@@ -381,11 +381,20 @@ section h2{
 }
 #learnt> ul> li{
     border: 1px solid #999;
+    box-shadow: 10px 10px 0 #555;
     height: 100%;
     width: 30%;
     position: relative;
     text-align: center;
+    transition: all 0.5s;
 }
+#learnt> ul> li:hover{
+    transform: translateY(-10px);
+    box-shadow: 10px 20px 0 #555;
+}
+#learnt> ul> li:nth-child(1):hover{background: #006699; color: #fff;}
+#learnt> ul> li:nth-child(2):hover{background: #dd5544; color: #fff;}
+#learnt> ul> li:nth-child(3):hover{background: #aa6644; color: #fff;}
 #learnt> ul> li> h3{
     font-size: 50px;
     margin: 20px 0;
