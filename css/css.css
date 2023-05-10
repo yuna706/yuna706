@@ -184,19 +184,31 @@ section h2{
     position: relative;
     background: linear-gradient(#91568F, rgba(0,0,0,0.0));
     width: 100%;
+    height: 100%;
+}
+#motto> .wrap{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
 #motto> .wrap> div{
-    font-size: 40px;
+    flex: 1;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+}
+#motto> .wrap> div> p:first-child{
+    font-size: 60px;
     text-align: center;
-    margin-top: 100px;
     line-height: 70px;
     text-shadow: 0 0 15px #ddd;
     font-weight: 600;
 }
-#motto> .wrap> span{
+#motto> .wrap> div> p:last-child{
     display: block;
     font-size: 25px;
-    margin-top: 150px;
     text-align: center;
 }
 
@@ -327,27 +339,27 @@ section h2{
 
 /* stc3 */
 #ability> .graph-div{
-    width: 90%;
-    height: 550px;
-    margin-top: 50px;
-    margin: 50px auto 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: grid;
+    height: calc(100% - 100px);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    align-content: center;
 }
 .graph-div> .ab-graph{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    font-size: 30px;
+    flex-direction: column;
+    width: 200px;
+    gap: 10px;
 }
 .ab-graph> p{
-    width: 150px;
-    text-align: right;
     transition: all 0.5s;
+    font-size: 1.6rem;
 }
 .ab-graph> div{
-    width: 700px;
+    width: 100%;
     height: 20px;
     border: 1px solid #000;
     border-radius: 30px;
@@ -364,12 +376,6 @@ section h2{
     left: 0;
 }
 .grap.on{border-right: 1px solid #000;}
-
-.ab-graph:nth-child(1) .grap.on{background: #00C8FF; width: 100%;}
-.ab-graph:nth-child(2) .grap.on{background: #EA6029; width: 100%;}
-.ab-graph:nth-child(3) .grap.on{background: #EABA25; width: 70%;}
-.ab-graph:nth-child(4) .grap.on{background: #DB5440; width: 80%;}
-.ab-graph:nth-child(5) .grap.on{background: #005798; width: 90%;}
 
 /* lrearn */
 #learnt> ul{
