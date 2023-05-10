@@ -82,22 +82,6 @@ $(function() {
     });
     */
 
-
-    //사용 안함
-    /*
-    $(window).scroll(function(){
-        let here = $("#ability").offset().top;
-        let height = $(document).scrollTop();
-        
-        if(here == height){
-            $(".grap").addClass("on");
-        };
-        if(here != height){
-            $(".grap").delay(3000).removeClass("on");
-        };
-    });
-*/
-
     //ability화면에 도달하면 그래프 움직이기
     $(window).scroll(function(){
         let here = $("#ability").offset().top - 300;
@@ -106,9 +90,12 @@ $(function() {
         let height = $(document).scrollTop();
         
         if(height >= here && height <= here + sectionHeight){
-            $(".grap").addClass("on");
+            $(".grap").map((index, element, sourse) => {
+                console.log(element);
+                $(element).attr("style", $(element).data("value"));
+            });
         }else {
-            $(".grap").delay(3000).removeClass("on");
+            $(".grap").delay(3000).attr("style", "");
         };
     });
 
@@ -118,20 +105,17 @@ $(function() {
     });
 
 
-    let a;
     //팝업창 띄우기
     $(".port").on("click", function(){
-        a = $(this).index();
-        
         $("#popup").addClass("on");
-        $(".popup").eq(a).css({"visibility":"visible"});
+        $(".popup").eq($(this).index()).css({"visibility":"visible"});
         $(".ham").css("display", "none");
     });
 
     //팝업창 닫기
     $("#popup").on("click", function(){
         $("#popup").removeClass("on");
-        $(".popup").eq(a).css({"visibility":"hidden"});                
+        $(".popup").css({"visibility":"hidden"});
         $(".ham").css("display", "block");
     });
 

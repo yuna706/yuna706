@@ -357,6 +357,10 @@ section h2{
 .ab-graph> p{
     transition: all 0.5s;
     font-size: 1.6rem;
+    text-align: center;
+}
+.ab-graph> p> img{
+    height: 25px;
 }
 .ab-graph> div{
     width: 100%;
