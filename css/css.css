@@ -495,7 +495,7 @@ section h2{
 }
 
 /********* info ********/
-#info{
+#information{
     position: relative;
     width: 100%;
     background: linear-gradient(rgba(0,0,0,0.0), rgba(72, 43, 71,0.5), rgba(72, 43, 71,0.9), #482B47);

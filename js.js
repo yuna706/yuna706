@@ -39,48 +39,26 @@ $(function() {
 
     $(".side> .menu> li").on("click",function(e){
         e.preventDefault();
+
         $("#sidemenu").css("margin-left","-390px"); //햄버거 메뉴 사라지기
         setTimeout(function(){
             $(".ham").css("display","block");
         }, 500);
-        let idx = $(this).index(); //몇번 째가 클릭되었는지
-        let top = idx * he; //높이 알아내기
 
-        $("html, body").stop().animate({"scrollTop":top}, 1000, "easeOutQuad");
+        let id = $(e.currentTarget).data("value");
+        let top = $(`#${id}`).offset().top;
+
+        $("html, body").stop().animate({ "scrollTop": top }, 1000, "easeOutQuad");
     });
 
-    $("nav> ul> li").on("click",function(e){
+    $("nav> ul> li").on("click", function(e){
         e.preventDefault();
 
-        let idx = $(this).index() + 1;
-        let top = idx * he;
+        let id = $(e.currentTarget).data("value");
+        let top = $(`#${id}`).offset().top;
 
-        $("html, body").stop().animate({"scrollTop":top}, 1000, "easeOutQuad");
+        $("html, body").stop().animate({ "scrollTop": top }, 1000, "easeOutQuad");
     });
-
-    //마우스 스크롤시 한 페이지 단위 이동
-    /*
-    let scrolling = false;
-
-    $("body> section").on("wheel", function(e){
-        e.preventDefault();
-        if(scrolling) return;
-
-        let delta = e.originalEvent.deltaY;
-        let idx = $(this).index();
-
-        if(delta > 0 && idx <= 8) {            
-            scrolling = true;
-            let next = $("body> section").eq(idx+1).offset().top;
-            $("html, body").stop().animate({"scrollTop": next}, 1500, "easeOutQuad", function(){scrolling = 0;});
-        }
-        else if(delta < 0 && idx > 0){
-            scrolling = true;
-            let prev = $("body> section").eq(idx-1).offset().top;
-            $("html, body").stop().animate({"scrollTop": prev}, 1500, "easeOutQuad", function(){scrolling = 0;});
-        }
-    });
-    */
 
     //ability화면에 도달하면 그래프 움직이기
     $(window).scroll(function(){
@@ -98,12 +76,6 @@ $(function() {
             $(".grap").delay(3000).attr("style", "");
         };
     });
-
-    //메뉴에서 ability를 클릭했을 때
-    $(".ability").on("click", function(){    
-        $(".grap").addClass("on");
-    });
-
 
     //팝업창 띄우기
     $(".port").on("click", function(){
