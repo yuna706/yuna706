@@ -60,15 +60,16 @@ body {
     height: 50px;
 }
 
-.ham>i {
-    font-size: 50px;
-    color: #c58ec3;
+.ham> svg  {
+    width: 50px;
     transition: all 0.5s;
 }
 
-.ham>i:hover {
-    color: #482B47;
+.ham> svg:hover {
     transform: scale(1.2);
+}
+.ham> svg:hover .st0 {
+    fill: #482B47;
 }
 
 .side>p {
@@ -313,6 +314,9 @@ section h2 {
     border-radius: 10px 10px 0 10px;
     transform-origin: right bottom;
 }
+.port>.gl > svg {
+    width: 25px;
+}
 
 @keyframes kejack {
     0% {
@@ -415,8 +419,9 @@ section h2 {
     margin-right: 20px;
 }
 
-.popup>.ex>p>a>i {
-    font-size: 50px;
+.popup>.ex>p>a>svg {
+    width: 50px;
+    fill: #fff;
 }
 
 .popup>p {
