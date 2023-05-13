@@ -19,13 +19,13 @@ $(function() {
     let audio = new Audio();
     audio.src = "./lukewarm.mp3";
 
-    $("#play> i").on("click", function(){
+    $("#play").on("click", function(){
         audio.play();
     });
-    $("#stop> i").on("click", function(){
+    $("#stop").on("click", function(){
         audio.pause();
     });
-    $("#start> i").on("click", function(){
+    $("#start").on("click", function(){
         audio.pause();
         audio.currentTime = 0;
     });

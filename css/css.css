@@ -62,6 +62,7 @@ body {
 
 .ham> svg  {
     width: 50px;
+    height: auto;
     transition: all 0.5s;
 }
 
@@ -87,9 +88,8 @@ body {
     justify-content: space-around;
 }
 
-.side>.player>li {
-    font-size: 40px;
-    color: #fff;
+.side>.player>li> svg {
+    width: 40px;
 }
 
 .side>.menu {
